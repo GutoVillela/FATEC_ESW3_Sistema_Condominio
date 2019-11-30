@@ -13,7 +13,7 @@ class CreatePessoaJuridicasTable extends Migration
      */
     public function up()
     {
-        Schema::create('pessoa_juridicas', function (Blueprint $table) {
+        Schema::create('pessoas_juridicas', function (Blueprint $table) {
             $table->unsignedBigInteger('pessoa_id');
             $table->foreign('pessoa_id')->references('id')->on('pessoas');
             $table->primary('pessoa_id');
@@ -30,6 +30,6 @@ class CreatePessoaJuridicasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pessoa_juridicas');
+        Schema::dropIfExists('pessoas_juridicas');
     }
 }
